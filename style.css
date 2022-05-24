@@ -11,40 +11,116 @@ html {
     color: #6cacc5;
     font: 300 18px/1.6 "Source Sans Pro",sans-serif;
     margin: 0;
-    padding: 5em 0 2em;
+    padding: 1em 0;
     text-align: center;
   }
-  
+
   .calculator {
-    font-size: 28px;
+    width: 50em;
     margin: 0 auto;
-    width: 17em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". aa bb . cc dd calculate"
+      ". . . u . . ."
+      ". e f . g h ."
+      ". . i . j . ."
+      ". v . k . w ."
+      ". . l . m . ."
+      "q p o n r s t"
+      ". . . . . . ."
+      ". g1 ijk . g7 eio ."
+      ". g2 efi . g8 fip ."
+      ". g3 ghj . g9 gjr ."
+      ". g4 opq . g10 hjs ."
+      ". g5 lmn . g11 ikm ."
+      ". g6 rst . g12 jkl ."
+      ". . . . g13 hidden .";
   }
-  
-  .text {
-    /*color: #c97874;*/
-    float: left;
-    line-height: 3em;
-    text-align: center;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 3em;
-    height: 3em;
-    border-style: solid;
-  }
-  
+
+  .aa { grid-area: aa; }
+  .bb { grid-area: bb; }
+  .cc { grid-area: cc; }
+  .dd { grid-area: dd; }
+
+  .calculate { grid-area: calculate; }
+
+  .e { grid-area: e; }
+  .f { grid-area: f; }
+  .g { grid-area: g; }
+  .h { grid-area: h; }
+
+  .i { grid-area: i; }
+  .j { grid-area: j; }
+
+  .k { grid-area: k; }
+
+  .l { grid-area: l; }
+  .m { grid-area: m; }
+
+  .n { grid-area: n; }
+
+  .o { grid-area: o; }
+  .p { grid-area: p; }
+  .q { grid-area: q; }
+
+  .r { grid-area: r; }
+  .s { grid-area: s; }
+  .t { grid-area: t; }
+
+  .u { grid-area: u; }
+
+  .v { grid-area: v; }
+
+  .w { grid-area: w; }
+
+  .g1 { grid-area: g1; }
+  .g2 { grid-area: g2; }
+  .g3 { grid-area: g3; }
+  .g4 { grid-area: g4; }
+  .g5 { grid-area: g5; }
+  .g6 { grid-area: g6; }
+
+  .g7 { grid-area: g7; }
+  .g8 { grid-area: g8; }
+  .g9 { grid-area: g9; }
+  .g10 { grid-area: g10; }
+  .g11 { grid-area: g11; }
+  .g12 { grid-area: g12; }
+
+  .g13 { grid-area: g13; }
+
+  .ijk { grid-area: ijk; }
+  .efi { grid-area: efi; }
+  .ghj { grid-area: ghj; }
+  .opq { grid-area: opq; }
+  .lmn { grid-area: lmn; }
+  .rst { grid-area: rst; }
+
+  .eio { grid-area: eio; }
+  .fip { grid-area: fip; }
+  .gjr { grid-area: gjr; }
+  .hjs { grid-area: hjs; }
+  .ikm { grid-area: ikm; }
+  .jkl { grid-area: jkl; }
+
+  .hidden { grid-area: hidden; }
+
+  .aa,
+  .bb,
+  .cc,
+  .dd,
   .birthdate {
     color: #6cacc5;
     background: #100a1c;
-    font-size: 28px;
-    width: 3em;
-    height: 3em;
+    width: 4.5em;
+    height: 4.5em;
+    margin: 0 auto;
     text-align: center;
-    /*float: left;
-    line-height: 3em;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    border-style: solid;*/
+    border-style: solid;
   }
 
   button {
@@ -54,9 +130,39 @@ html {
     cursor: pointer;
     float: left;
     font: inherit;
-    margin: 0.25em;
     width: 3em;
     height: 3em;
+    margin: 0 auto;
     transition: all 0.5s;
   }
-  
+
+  .e,
+  .f,
+  .g,
+  .h,
+  .i,
+  .j,
+  .k,
+  .l,
+  .m,
+  .n,
+  .o,
+  .p,
+  .q,
+  .r,
+  .s,
+  .t,
+  .u,
+  .v,
+  .w,
+  .text {
+    float: left;
+    line-height: 3em;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 3em;
+    height: 3em;
+    margin: 0 auto;
+    border-style: solid;
+  }
